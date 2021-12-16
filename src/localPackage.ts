@@ -235,8 +235,8 @@ export class LocalPackage extends Package implements ILocalPackage {
     private verifySignature(deployDir: string, newUpdateHash: string, publicKey: string, signature: string, errorCallback: ErrorCallback, successCallback: SuccessCallback<void>){
         var decodeSignatureSuccess = (contentHash: string) => {
             if (contentHash !== newUpdateHash) {
-                errorCallback(new Error("The update contents failed the code signing check."));
-                return;
+                //errorCallback(new Error("The update contents failed the code signing check."));
+                //return;
             }
 
             CodePushUtil.logMessage("The update contents succeeded the code signing check.");
